@@ -14,7 +14,7 @@ import java.util.List;
  * @author - GreenLearner(https://www.youtube.com/channel/UCaH2MTg94hrJZTolW01a3ZA)
  */
 
-@FeignClient(name = "feignUserService", url = "http://localhost:8083/springDataDemo/")
+@FeignClient(name = "${service.name}", url = "${service.base.url}")
 public interface UserService {
 
     @GetMapping("/user/{id}")

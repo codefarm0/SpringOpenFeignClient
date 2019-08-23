@@ -2,5 +2,11 @@ feign:
   client:
     config:
       default:
-        readTimeout: 500
-        loggerLevel: FULL
+        readTimeout: 1500
+        connectTimeout: 500
+
+
+service:
+    base:
+        url: http://localhost:8083/springDataDemo/
+    name: feignUserService
